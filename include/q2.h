@@ -15,11 +15,11 @@ namespace q2
     struct Patient
     {
         Patient(std::string _name, size_t _age, size_t  _smokes, size_t _area_q, size_t _alkhol)
-            : name{_name}
-            , age{_age}
-            , smokes{_smokes}
-            , area_q{_area_q}
-            , alkhol{_alkhol}
+            : name{ _name }
+            , age{ _age }
+            , smokes{ _smokes }
+            , area_q {_area_q }
+            , alkhol{ _alkhol }
         {
         };
 
@@ -44,13 +44,13 @@ namespace q2
 
         while(std::regex_search(txt, match, pattern))
         {
-            std::string first_name{match[1]}, last_name{match[2]};
-            std::string full_name{first_name + " " + last_name};
-            size_t age{static_cast<size_t>(std::stoi(match[3]))};
-            size_t smokes{static_cast<size_t>(std::stoi(match[4]))};
-            size_t area_q{static_cast<size_t>(std::stoi(match[5]))};
-            size_t alkhol{static_cast<size_t>(std::stoi(match[6]))};
-            Patients.push_back(Patient{full_name, age, smokes, area_q, alkhol});
+            std::string first_name{ match[1] }, last_name{ match[2] };
+            std::string full_name{ first_name + " " + last_name };
+            size_t age{ static_cast<size_t>(std::stoi(match[3])) };
+            size_t smokes{ static_cast<size_t>(std::stoi(match[4])) };
+            size_t area_q{ static_cast<size_t>(std::stoi(match[5])) };
+            size_t alkhol{ static_cast<size_t>(std::stoi(match[6])) };
+            Patients.push_back(Patient{ full_name, age, smokes, area_q, alkhol });
             txt = match.suffix().str();
         }
 

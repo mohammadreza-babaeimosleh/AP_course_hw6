@@ -18,8 +18,8 @@ namespace q1
     double gradient_descent(T initial_value, double step_size , Func func=Func{})
     {
 
-        double learn_rate{step_size} , tolerance{0.00001};
-        T tmp{initial_value};
+        double learn_rate{ step_size } , tolerance{ 0.00001 };
+        T tmp{ initial_value };
         double diff{ learn_rate * derivative(tmp, func) }; 
         while (std::abs(diff) >= tolerance)
         {
