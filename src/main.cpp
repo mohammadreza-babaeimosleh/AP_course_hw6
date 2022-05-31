@@ -1,5 +1,6 @@
 #include <iostream>
 #include <gtest/gtest.h>
+#include<numeric>
 
 
 // #include "q1.h"
@@ -8,7 +9,6 @@
 // #include "q4.h"
 
 
-double power(double x) { return x*x ;}
 
 int main(int argc, char **argv)
 {
@@ -18,7 +18,6 @@ int main(int argc, char **argv)
         // std::cout << mamad[0].name << std::endl;
         // q2::sort(mamad);
         // std::cout << mamad[0].name << std::endl;
-
     }
     else
     {
