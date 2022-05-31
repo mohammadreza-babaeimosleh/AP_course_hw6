@@ -14,11 +14,10 @@ int main(int argc, char **argv)
 {
     if (false) // make false to run unit-tests
     {
-        // std::vector<q2::Patient> mamad{q2::read_file("/usr/src/app/resources/lung_cancer.csv")};
+        //auto mamad{q3::gather_flights("/usr/src/app/resources/flights.txt")};
         // std::cout << mamad[0].name << std::endl;
         // q2::sort(mamad);
         // std::cout << mamad[0].name << std::endl;
-
 
     }
     else
