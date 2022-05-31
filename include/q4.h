@@ -26,6 +26,7 @@ namespace q4
         double accuracy;    
     };
 
+    //functions for accumulate
     double avg_cal_x(double avg, Sensor& s)
     {
         return avg + s.pos.x * s.accuracy;

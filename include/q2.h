@@ -58,6 +58,7 @@ namespace q2
 
     }
 
+    //also can be defined as lambda of functor
     bool comparison(Patient& a, Patient& b)
     {
         return 3*(a.age) + 5*(a.smokes) + 2*(a.area_q) + 4*(a.alkhol) > 3*(b.age) + 5*(b.smokes) + 2*(b.area_q) + 4*(b.alkhol); 

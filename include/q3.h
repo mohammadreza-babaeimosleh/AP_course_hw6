@@ -24,6 +24,7 @@ namespace q3
         size_t price;
     };
     
+    //function for turning time into minutes
     size_t time_cal(std::string time)
     {   
         if(time.empty())
@@ -36,7 +37,7 @@ namespace q3
         std::regex_search(time, match, pattern);
         size_t total_time{ static_cast<size_t>(std::stoi(match[1])) * 60 };
         std::string emp_check { match[2] };
-        if(emp_check.empty())
+        if(emp_check.empty()) //check if it contains minutes
         {
             return total_time;
         }
@@ -47,6 +48,7 @@ namespace q3
         }
     }
 
+    //function for being use ass pq argument
     auto comparison{ [](Flight a, Flight b){return (a.duration + a.connection_times + 3 * a.price) > (b.duration + b.connection_times + 3 * b.price);} };
 
     std::priority_queue<Flight, std::vector<Flight>, decltype(comparison)> Flight_info{comparison};
@@ -69,8 +71,7 @@ namespace q3
             size_t connections{ static_cast<size_t>(std::stoi(match[3])) };
             size_t connection_times{ time_cal(match[4]) + time_cal(match[5]) + time_cal(match[6]) };
             size_t price{ static_cast<size_t>(std::stoi(match[7])) };
-            std::cout << duration << std::endl;
-            std::cout << match[2] << std::endl;
+
             Flight_info.push(Flight{flight_number, duration, connections, connection_times, price});
             txt = match.suffix().str();
         }
