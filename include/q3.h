@@ -25,7 +25,7 @@ namespace q3
     };
     
     //function for turning time into minutes
-    size_t time_cal(std::string time)
+    inline size_t time_cal(std::string time)
     {   
         if(time.empty())
         {
@@ -49,11 +49,11 @@ namespace q3
     }
 
     //function for being use ass pq argument
-    auto comparison{ [](Flight a, Flight b){return (a.duration + a.connection_times + 3 * a.price) > (b.duration + b.connection_times + 3 * b.price);} };
+    inline auto comparison{ [](Flight a, Flight b){return (a.duration + a.connection_times + 3 * a.price) > (b.duration + b.connection_times + 3 * b.price);} };
 
-    std::priority_queue<Flight, std::vector<Flight>, decltype(comparison)> Flight_info{comparison};
+    inline std::priority_queue<Flight, std::vector<Flight>, decltype(comparison)> Flight_info{comparison};
 
-    auto gather_flights(std::string filename)
+    static auto gather_flights(std::string filename)
     {
         std::ifstream file(filename);
         std::stringstream buffer;

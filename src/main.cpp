@@ -3,10 +3,10 @@
 #include<numeric>
 
 
-// #include "q1.h"
-// #include "q2.h"
-// #include "q3.h"
-// #include "q4.h"
+#include "q1.h"
+#include "q2.h"
+#include "q3.h"
+#include "q4.h"
 
 
 
